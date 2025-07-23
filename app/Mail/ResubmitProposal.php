@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Mail;
+
+use App\Filament\Resources\MyProposalResource;
+use Spatie\MailTemplates\TemplateMailable;
+
+class ResubmitProposal extends TemplateMailable
+{
+    /** @var string */
+    public string $url;
+    public string $proposalStatus;
+    public string $proposalName;
+
+    /** @var string */
+    public string $logo_url;
+
+    public function __construct($proposal)
+    {
+        $this->url = MyProposalResource::getUrl('general-info', ['record' => $proposal->getKey()]);
+        $this->proposalName = $proposal->name;
+        $this->proposalStatus = ucfirst(str_replace('_', ' ', $proposal->status));
+        $this->logo_url = asset('images/erihs_logo.png');
+    }
+
+    public function getHtmlLayout(): ?string
+    {
+        $pathToLayout = storage_path('mail-layouts/header-email.blade.php');
+        return file_get_contents($pathToLayout);
+    }
+}

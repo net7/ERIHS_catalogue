@@ -1,0 +1,28 @@
+{
+    "properties": {
+        "title": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "autocomplete_search",
+            "fields": {
+                "keyword": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "description": {
+            "type": "text",
+            "analyzer": "autocomplete",
+            "search_analyzer": "autocomplete_search"
+        },
+        "method_service_tool":{
+            "properties": {
+                "method": {
+                    "properties":{
+
+                    }
+                }
+            }
+        }
+    }
+}

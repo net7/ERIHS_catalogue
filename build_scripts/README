@@ -1,0 +1,6 @@
+# scripts per il build del progetto in docker
+
+lanciare lo script col comando:
+
+bash build.sh
+

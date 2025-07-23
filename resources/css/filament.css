@@ -1,0 +1,156 @@
+/* @import '../../vensdor/filament/filament/resources/css/app.css'; */
+
+
+[x-cloak] {
+    display: none;
+}
+
+
+.loading-overlay {
+
+    background: #f3f4f655;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.loading-overlay-image-container {
+    position: fixed;
+    z-index: 7;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-overlay-img {
+    width: 600px;
+    border-radius: 5px;
+}
+
+/* This won't be included in your compiled CSS unless you actually use it */
+@layer components {
+    .fi-fo-checkbox-list-option-description {
+        @apply w-9 h-6 p-1 bg-slate-300 rounded-3xl flex-col justify-center items-center gap-2.5 inline-flex float-right;
+    }
+
+    .fi-fo-checkbox-list-option-label div {
+        @apply flow-root w-full;
+
+    }
+
+    .badge {
+        @apply rounded-xl px-[10px] py-[2px];
+    }
+
+    .badge-red {
+        @apply bg-red-100 text-red-700;
+        color: #f10d25;
+    }
+
+    .badge-yellow {
+        @apply bg-yellow-100 text-yellow-700;
+    }
+
+    .badge-green {
+        @apply bg-green-100 text-green-700;
+    }
+
+}
+
+/* modal  */
+.fi-modal-close-overlay {
+    @apply backdrop-blur-sm;
+}
+
+/* ribbons */
+
+.ribbon:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 20px 15px;
+    width: 10px;
+
+    border-bottom-left-radius: 20px 15px;
+    /* height: 100px; */
+}
+
+.ribbon.yellow-band:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 20px 15px;
+    width: 10px;
+    border-bottom-left-radius: 20px 15px;
+    /* height: 100px; */
+    background: gold;
+}
+
+.ribbon.gray-band:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 20px 15px;
+    width: 10px;
+    border-bottom-left-radius: 20px 15px;
+    background: grey;
+}
+
+.ribbon.green-band:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 20px 15px;
+    width: 10px;
+    border-bottom-left-radius: 20px 15px;
+    background: yellowgreen;
+}
+
+.ribbon.red-band:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 20px 15px;
+    width: 10px;
+    border-bottom-left-radius: 20px 15px;
+    background: tomato;
+}
+
+/* loader */
+
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.pace-inactive {
+    display: none
+}
+
+.pace .pace-progress {
+    background: #2D4547;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 3px
+}
