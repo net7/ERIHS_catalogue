@@ -1,5 +1,5 @@
 
-# install all the stuff
+# install all the required packages
 ```
 composer install
 ```
