@@ -1,4 +1,9 @@
 
+[![DOI](https://zenodo.org/badge/1024881453.svg)](https://doi.org/10.5281/zenodo.16362228)
+
+
+
+
 # install all the required packages
 ```
 composer install
